@@ -1,0 +1,78 @@
+@use "../abstracts/" as *;
+@use "../base/" as *;
+
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 80px;
+    color: $textColor;
+    // gap: 20rem;
+    background-color: $BodyColor;
+    font-family: $NavFont;
+    cursor: pointer;
+
+    h3{
+        margin-left: 1rem;
+    }
+
+   .nav-link{
+    margin: 0 2rem;
+    color: $textColor;
+    text-decoration: none;
+    font-family: $NavFont;
+
+    &:hover{
+        color: $SecondaryColor;
+    }
+
+   }
+
+   .nav-btn{
+    background-color: transparent;
+    cursor: pointer;
+    padding: 5px;
+    border: none;
+    outline: none;
+    visibility: hidden;
+    opacity: 0;
+    font-size: 1.5rem;
+   }
+
+   @media only screen and (max-width: 1024px) {
+        .nav-btn{
+            visibility: visible;
+            opacity: 1; 
+        }
+
+        nav{
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            background-color: $SecondaryColor;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 1.5rem;
+            transition: 1s;
+            transform: translateY(-100vh);
+        }
+
+        .responsive_nav{
+            transform: none; 
+        }
+
+        .nav-close-btn{
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+        }   
+
+
+   }
+
+}

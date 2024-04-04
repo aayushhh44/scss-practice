@@ -1,0 +1,13 @@
+@forward "abstracts";
+@forward "base";
+@forward "components";
+@forward "Pages";
+@forward "themes";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
